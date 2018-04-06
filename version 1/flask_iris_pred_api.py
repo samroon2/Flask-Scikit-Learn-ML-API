@@ -31,7 +31,7 @@ def irisapi():
 	y_pred = clf.predict(clientdata)
 
 	#Decode our encoded data lables, so the client recieves lables not encoded values
-	fnames = {0:'Versicolor',1:'Virginica',2:'Setosa'}
+	fnames = {0:'Setosa', 1:'Versicolor', 2:'Virginica'}
 
 	#list comprehension, applying our function to get the labels and placing in our dataframe			
 	clientdata['PredictedIris'] = [fnames.get(x, x) for x in y_pred]
